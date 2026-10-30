@@ -1,58 +1,22 @@
-<div align="center">
+# Zsh configuration
 
-# Zsh Configuration — Catppuccin Mocha
+Oh My Zsh, Autosuggestions, Syntax-Highlighting, FZF, zoxide und Shell-Helfer.
 
-**A clean, fast Zsh setup with Oh My Zsh, autosuggestions, zoxide jump (`j`), and FZF.**
+**[Vollständige Dokumentation](https://arch-dotfiles.readthedocs.io/en/latest/shell/)** ·
+[Komponenten](https://arch-dotfiles.readthedocs.io/en/latest/components/#zsh) ·
+[Installation und Updates](https://arch-dotfiles.readthedocs.io/en/latest/arch-package/)
 
-Arch Linux · Zsh · Oh My Zsh · Catppuccin Mocha
+```bash
+curl -fsSL https://raw.githubusercontent.com/MichaelWeissDEV/dotfiles/main/install.sh | bash -s -- zsh
+```
 
-[![Docs](https://readthedocs.org/projects/arch-dotfiles/badge/?version=latest)](https://arch-dotfiles.readthedocs.io/en/latest/)
-[![Shell Docs](https://img.shields.io/badge/docs-Shell%20%26%20CLI-89b4fa)](https://arch-dotfiles.readthedocs.io/en/latest/shell/)
-[![Dotfiles Hub](https://img.shields.io/badge/ecosystem-arch--dotfiles-1793D1?logo=arch-linux&logoColor=white)](https://arch-dotfiles.readthedocs.io/en/latest/)
-[![Theme: Catppuccin Mocha](https://img.shields.io/badge/theme-Catppuccin%20Mocha-cba6f7)](https://github.com/catppuccin/catppuccin)
-[![Shell: Zsh](https://img.shields.io/badge/shell-Zsh%20%7C%20Oh%20My%20Zsh-blue?logo=gnu-bash&logoColor=white)](https://zsh.sourceforge.io/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](../LICENSE)
+Paket: `arch-dotfiles-zsh`. Dateien: `~/.config/zsh/zshrc`, `aliases.zsh` und `themes/`.
+`~/.zshrc` wird bei der Aktivierung gesichert und verlinkt. Login-Shell und
+Systemdienste werden nicht automatisch geändert. Alle Aliase stehen im Handbuch.
 
-[**Ecosystem Documentation**](https://arch-dotfiles.readthedocs.io/en/latest/) ·
-[Shell & CLI Guide](https://arch-dotfiles.readthedocs.io/en/latest/shell/) ·
-[Installation Guide](https://arch-dotfiles.readthedocs.io/en/latest/installation/) ·
-[Startup (`zshrc`)](zshrc) ·
-[Aliases (`aliases.zsh`)](aliases.zsh)
+Hier unabhängig auf `main` pushen; nach erfolgreichem Registry-Build mit
+`sudo pacman -Syu` aktualisieren. [PACKAGING.md](PACKAGING.md).
 
-</div>
+[![Package safety](https://github.com/MichaelWeissDEV/zsh-config/actions/workflows/package.yml/badge.svg)](https://github.com/MichaelWeissDEV/zsh-config/actions/workflows/package.yml)
 
----
-
-## Overview
-
-This directory contains the **Zsh** shell configuration for the **Arch Linux Dotfiles** ecosystem (`arch-dotfiles`). It pairs Oh My Zsh with a distraction-free pastel prompt, asynchronous history autosuggestions, syntax highlighting, smart directory jumping (`j` / `ji` via `zoxide`), and fast productivity aliases.
-
-## Configuration Files
-
-| File | Target Symlink | Description |
-| :--- | :--- | :--- |
-| **[`zshrc`](zshrc)** | `~/.zshrc` | Primary Zsh startup configuration, OMZ plugin loading, environment variables |
-| **[`aliases.zsh`](aliases.zsh)** | `~/.config/zsh/aliases.zsh` | Aliases for `adot`, `yazi` (`y`), `nvim` (`nv`), `vim` (`v`), `tmux` (`tm`), `fzf` |
-| **[`themes/catppuccin.zsh-theme`](themes/catppuccin.zsh-theme)** | `~/.oh-my-zsh/custom/themes/...` | Minimal Catppuccin Mocha prompt theme (`> `) |
-
-## Key Features
-
-- **Smart Directory Jump (`j`)**: Jump to frequent directories via `j <query>` or interactive `fzf` selector via `ji` (powered by `zoxide`).
-- **Autosuggestions & Syntax Highlighting**: Type ahead with historical suggestions (<kbd>→</kbd> or <kbd>End</kbd> to accept) and live command validation.
-- **Sudo Shortcut**: Press <kbd>Esc</kbd> <kbd>Esc</kbd> to prefix current or last command with `sudo`.
-- **Yazi Shell Wrapper (`y`)**: Quitting Yazi (<kbd>q</kbd>) automatically changes the shell's working directory to the last browsed folder.
-- **Ecosystem CLI (`adot`)**: Full CLI command integration (`adot update`, `adot status`, `adot list`, `adot keys`, `adot commands`).
-
----
-
-## Connected Dotfiles Ecosystem
-
-| Component | Repository | Documentation |
-| :--- | :--- | :--- |
-| **Arch Dotfiles Hub** *(Main System)* | [`MichaelWeissDEV/dotfiles`](https://github.com/MichaelWeissDEV/dotfiles) | [arch-dotfiles.readthedocs.io](https://arch-dotfiles.readthedocs.io/en/latest/) |
-| **Neovim (`nvim-config`)** | [`MichaelWeissDEV/nvim-config`](https://github.com/MichaelWeissDEV/nvim-config) | [nvim-config.readthedocs.io](https://nvim-config.readthedocs.io/en/latest/) |
-| **tmux (`tmux-config`)** | [`MichaelWeissDEV/tmux-config`](https://github.com/MichaelWeissDEV/tmux-config) | [tmux-config.readthedocs.io](https://tmux-config.readthedocs.io/en/latest/) |
-| **Ghostty (`ghostty-config`)** | [`MichaelWeissDEV/ghostty-config`](https://github.com/MichaelWeissDEV/ghostty-config) | [ghostty-config.readthedocs.io](https://ghostty-config.readthedocs.io/en/latest/) |
-| **Kitty (`kitty-config`)** | [`MichaelWeissDEV/kitty-config`](https://github.com/MichaelWeissDEV/kitty-config) | [kitty-config.readthedocs.io](https://kitty-config.readthedocs.io/en/latest/) |
-| **Foot (`foot-config`)** | [`MichaelWeissDEV/foot-config`](https://github.com/MichaelWeissDEV/foot-config) | [Terminals Guide](https://arch-dotfiles.readthedocs.io/en/latest/terminals/) |
-| **Vim (`vim-config`)** | [`MichaelWeissDEV/vim-config`](https://github.com/MichaelWeissDEV/vim-config) | [vim-config.readthedocs.io](https://vim-config.readthedocs.io/en/latest/) |
+[MIT-Lizenz](LICENSE).
