@@ -1,0 +1,17 @@
+# Package-local recipe. Stage checksummed sources with packaging/arch/build.sh.
+pkgname=arch-dotfiles-zsh
+pkgver=0.3.0
+pkgrel=1
+pkgdesc='Zsh configuration, theme and shell helpers'
+arch=('any')
+url='https://github.com/MichaelWeissDEV/dotfiles'
+license=('LicenseRef-arch-dotfiles-bundle')
+depends=('arch-dotfiles-core>=0.3.0' 'zsh' 'arch-dotfiles-oh-my-zsh' 'zsh-autosuggestions' 'zsh-syntax-highlighting' 'fzf' 'zoxide')
+optdepends=()
+options=('!strip')
+source=('payload.tar.gz')
+sha256sums=('__SOURCE_SHA256__')
+
+package() {
+    cp -a "$srcdir/usr" "$pkgdir/"
+}

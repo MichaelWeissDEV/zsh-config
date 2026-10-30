@@ -1,0 +1,6 @@
+*.log
+*.bak
+*.swp
+*~
+.zsh_history
+*.local.zsh
