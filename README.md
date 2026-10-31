@@ -17,6 +17,12 @@ Systemdienste werden nicht automatisch geändert. Alle Aliase stehen im Handbuch
 Hier unabhängig auf `main` pushen; nach erfolgreichem Registry-Build mit
 `sudo pacman -Syu` aktualisieren. [PACKAGING.md](PACKAGING.md).
 
+### Anpassung
+
+Einstieg ist `~/.config/zsh/zshrc`; Aliase stehen in `aliases.zsh`. Änderungen in einer neuen Shell testen. Die Login-Shell wird nicht automatisch umgestellt; die Shell-Anleitung erklärt die vorhandenen Helfer.
+
+Eigene Änderungen in der aktivierten Benutzerkopie bleiben bei der Synchronisierung erhalten; neue abweichende Vorgaben erscheinen als `.pacnew`. Siehe [Update und Wiederherstellung](https://arch-dotfiles.readthedocs.io/en/latest/verification/).
+
 [![Package safety](https://github.com/MichaelWeissDEV/zsh-config/actions/workflows/package.yml/badge.svg)](https://github.com/MichaelWeissDEV/zsh-config/actions/workflows/package.yml)
 
 [MIT-Lizenz](LICENSE).
